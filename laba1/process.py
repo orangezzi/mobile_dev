@@ -20,13 +20,15 @@ class Biller(object):
         return self.incoming_calls + self.outcoming_calls
 
     def get_cost_sms(self):
+        cost = 0
+        
         if self.sms_count > 5:
-            sms_count = self.sms_count - 5
-            if sms_count > 10:
-                return (sms_count - 5) * 2 + 5
-            else:
-                return self.sms_count * 1
-        return 0
+            cost += min(self.sms_count - 5, 5)
+        
+        if self.sms_count > 10:
+            cost += (self.sms_count - 10) * 2
+
+        return cost
 
     def get_cost(self):
         return self.get_cost_call() + self.get_cost_sms()
