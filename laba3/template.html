@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Бланк "Счет на оплату"</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        body {
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: "Arial";
+        }
+
+        .border-top {
+            border-top: 1px solid black;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid black;
+        }
+
+        .border-right {
+            border-right: 1px solid black;
+        }
+
+        .border-left {
+            border-left: 1px solid black;
+        }
+
+        .bill-header {
+            border: 1px solid black;
+            width: 100%;
+        }
+
+        .bill-header td {
+            padding: 7px;
+        }
+
+        .bill-details {
+            border: 2px solid black;
+            width: 100%;
+        }
+
+        .bill-details td {
+            padding: 7px;
+        }
+
+        .black-line {
+            border: 1px solid black;
+        }
+
+        .block-vertical {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .total {
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .signs {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="bill-header" style="border-spacing: 0;">
+        <tr>
+            <td>
+                АО "Стоун банк" Г. МОСКВА
+            </td>
+            <td>
+
+            </td>
+            <td class="border-left border-bottom">
+                БИК
+            </td>
+            <td class="border-left">
+                044525700
+            </td>
+        </tr >
+        <tr>
+            <td class="border-bottom">
+                Банк получателя
+            </td>
+            <td class="border-bottom">
+
+            </td>
+            <td  class="border-left border-bottom">
+                Сч. №
+            </td>
+            <td class="border-left border-bottom">
+                30101810200000000700
+            </td>
+        </tr>
+        <tr>
+            <td class="border-bottom">
+                ИНН 7722737766
+            </td>
+            <td class="border-bottom border-left">
+                КПП 772201001
+            </td>
+            <td class="border-left">
+                Сч. №
+            </td>
+            <td class="border-left">
+                40702810900000002453
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ООО"Василек"
+            </td>
+            <td>
+                
+            </td>
+            <td class="border-left">
+                
+            </td>
+            <td class="border-left">
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Получатель
+            </td>
+            <td>
+                
+            </td>
+            <td class="border-left">
+                
+            </td>
+            <td class="border-left">
+                
+            </td>
+        </tr>
+    </table>
+    
+    <h2>
+        Счет на оплату № 82 от 01 июля 2016 г.
+    </h2>
+
+    <hr class="black-line">
+
+    <table class="block-vertical">
+        <tbody>
+            <tr>
+                <td>
+                    Поставщик<br>(Исполнитель):
+                </td>
+                <td>
+                    ООО "ВАСИЛЕК", ИНН 7722737753, КПП 773301001, 109052, г. Москва, ул. ДОБРЫНИНСКАЯ, дом № 70, корпус 2
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Покупатель<br>(Заказчик):
+                </td>
+                <td>
+                    ООО ЛАГУНА, ИНН 7714037378, КПП 777550001, 119361, г. Москва, ул. ТУЛЬСКАЯ, дом № 4, строение 1
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Основание:
+                </td>
+                <td>
+                    <b>№ 20022016 от 12.02.2016</b>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="bill-details" style="border-spacing: 0;">
+        <tbody>
+            <tr>
+                <td class="border-bottom">
+                    №
+                </td>
+                <td class="border-bottom border-left ">
+                    Товары (работы, услуги)
+                </td>
+                <td class="border-bottom border-left">
+                    Кол-во
+                </td>
+                <td class="border-bottom border-left">
+                    Ед.
+                </td>
+                <td class="border-bottom border-left">
+                    Цена
+                </td>
+                <td class="border-bottom border-left">
+                    Сумма
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td class="border-left">
+                    Телефония
+                </td>
+                <td class="border-left">
+                    1
+                </td>
+                <td class="border-left">
+                    1
+                </td>
+                <td class="border-left">
+                    {{telephone_bill}}
+                </td>
+                <td class="border-left">
+                    {{telephone_bill}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    3
+                </td>
+                <td class="border-left">
+                    Интернет
+                </td>
+                <td class="border-left">
+                    1
+                </td>
+                <td class="border-left">
+                    1
+                </td>
+                <td class="border-left">
+                    {{internet_bill}}
+                </td>
+                <td class="border-left">
+                    {{internet_bill}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="total block-vertical">
+        <tbody>
+            <tr>
+                <td>
+                    Итого:
+                </td>
+                <td>
+                    {{total}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Всего к оплате:
+                </td>
+                <td>
+                    {{total}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <p>Всего наименований 3, на сумму {{total}} руб</p>
+        <p><b>Два миллиона пятьсот тысяч рублей 00 копеек</b></p>
+    </div>
+
+    <hr class="black-line">
+
+    <table class="signs">
+        <tbody>
+            <tr>
+                <td>
+                    Руководитель
+                </td>
+                <td>
+                    _____________ Семенов Д.А
+                </td>
+                <td>
+                    Бухгалтер
+                </td>
+                <td>
+                    _____________ Семенов Д.А.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
